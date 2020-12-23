@@ -1,0 +1,119 @@
+.url {
+    font-size: 35px;
+    text-align: left;
+    word-break: break-all;
+}
+
+#url_scheme {
+    color: #ff4d4d;
+}
+
+#url_scheme_https {
+    color: #3ae374;
+}
+
+#url_host {
+    color: #7efff5;
+
+}
+
+#url_pathname {
+    color: #17c0eb;
+}
+
+#url_search {
+    color: #a55eea;
+}
+
+#url_hash {
+    color: #778ca3;
+}
+
+body {
+    color: #fff;
+    background: #17181c;
+    font: 300 1em 'Fira Sans', sans-serif;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 70vh;
+    display: -webkit-box;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+.countDownText {
+    color: #dcdde1;
+    font-weight: 400;
+    font-size: 25px;
+    margin: 0px;
+    background: #2f364069;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    font-weight: 400;
+}
+
+.context {
+    display: flex;
+}
+
+.context_end {
+    text-align: right;
+}
+
+.fdiv {
+    max-width: 75vw;
+    max-height: 75vw;
+}
+
+button {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    outline: none;
+}
+
+.link_div {
+    background: #2f364069;
+
+    padding: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 0px 7px 0px 7px;
+}
+
+.creator {
+    color: #dcdde1;
+    font-weight: 400;
+    font-size: 25px;
+    margin: 0px;
+    background: #2f364069;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 7px 7px;
+    display: inline-block;
+}
+
+.creatorButton {
+    color: #4b4b4b;
+}
+
+.stopButton {
+    margin-top: 10px;
+    background: #2f364069;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 7px 0px 0px;
+    color: #eb4d4b;
+}

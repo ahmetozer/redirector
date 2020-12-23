@@ -1,0 +1,28 @@
+body {
+    color: #fff;
+    background: #17181c;
+    font: 300 1em 'Fira Sans', sans-serif;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    min-height: 95vh;
+    display: -webkit-box;
+    display: flex;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.code-red {
+    color: #eb174c;
+    font: inherit;
+}
+
+.code-blue {
+    color: #17c0eb;
+    font: inherit;
+}
