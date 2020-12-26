@@ -26,8 +26,7 @@
     </div>
 </body>
 <footer>
-    <script>
-        function uSet(e, t) { document.getElementById(e).innerHTML = t } let pageLoc = new URL(window.location.href); const uint_regex = RegExp("^[0-9]{1,}$"); let from = pageLoc.searchParams.get("from"); const to = pageLoc.searchParams.get("to"); let time = pageLoc.searchParams.get("time"); uint_regex.test(time) || (time = 30), uSet("countDowntime", time + "s "); let countDownTime = time - 1; var countInterval = setInterval(function () { uSet("countDowntime", countDownTime + "s "), countDownTime < 1 && (clearInterval(countInterval), uSet("countDowntime", "0"), window.location.href = to), countDownTime -= 1 }, 1e3); if (null != to && null != to) { let e; try { e = new URL(decodeURIComponent(to)) } catch { uSet("url_scheme", "Error: url cannot parsed."), uSet("countDowntime", "∞ "), clearInterval(countInterval) } "https:" == e.protocol ? uSet("url_scheme_https", e.protocol + "//") : uSet("url_scheme", e.protocol + "//"), uSet("url_host", e.host), uSet("url_pathname", e.pathname), uSet("url_pathname", e.pathname), uSet("url_search", e.search), uSet("url_hash", e.hash) } else uSet("url_scheme", "Error: Nothing given to redirect."), uSet("countDowntime", "∞ "), clearInterval(countInterval);
+    <script src="assets/main.js">
     </script>
 </footer>
 
