@@ -5,9 +5,18 @@
     <title>Redirector</title>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style type="text/css">
-        .url{font-size:35px;text-align:left;word-break:break-all}#url_scheme{color:#ff4d4d}#url_scheme_https{color:#3ae374}#url_host{color:#7efff5}#url_pathname{color:#17c0eb}#url_search{color:#a55eea}#url_hash{color:#778ca3}body{color:#fff;background:#17181c;font:300 1em 'Fira Sans',sans-serif;-webkit-box-pack:center;justify-content:center;align-content:center;-webkit-box-align:center;align-items:center;min-height:70vh;display:-webkit-box;display:flex;padding:0;margin:0}.countDownText{color:#dcdde1;font-weight:400;font-size:25px;margin:0;background:#2f364069;padding-left:10px;padding-right:10px;border-radius:7px 7px 0 0}a{text-decoration:none;text-align:center;font-weight:400}.context{display:flex}.context_end{text-align:right}.fdiv{max-width:75vw;max-height:75vw}button{border:none;padding:0;margin:0;background-color:transparent;outline:0}.link_div{background:#2f364069;padding:20px;text-align:left;font-family:Montserrat,sans-serif;font-weight:500;border-radius:0 7px 0 7px}.creator{color:#dcdde1;font-weight:400;font-size:25px;margin:0;background:#2f364069;padding-left:10px;padding-right:10px;border-radius:0 0 7px 7px;display:inline-block}.creatorButton{color:#4b4b4b}.stopButton{margin-top:10px;background:#2f364069;padding-left:10px;padding-right:10px;border-radius:0 7px 0 0;color:#eb4d4b}
-    </style>
+    <!--! Configuration begin -->
+    <script>
+        const waitTime = 5;
+        const regexSafeUrl = [
+            /^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(google.(com|co.uk|com.tr|nl))($|\/)/i,
+            /^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(ahmetozer.org)($|\/)/i,
+            /^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(github.com)($|\/ahmetozer\/)/i,
+            /^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(docker.com)($|\/)/i,
+            /^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(twitter.com)($|\/)/i
+        ];
+    </script>
+    <!--! Configuration end -->
 </head>
 
 <body>
@@ -17,16 +26,208 @@
             <button class="stopButton"
                 onclick="clearInterval(countInterval);uSet('countDowntime', '∞');this.hidden=true">stop</button>
         </div>
-        <div class="link_div" onclick="window.location.href = to"><color class="url" id="url_scheme"></color><color class="url" id="url_scheme_https"></color><color class="url" id="url_host"></color><color class="url" id="url_pathname"></color><color class="url" id="url_search"></color><color class="url" id="url_hash"></color>
+        <div class="link_div" onclick="window.location.href = to">
+            <color class="url" id="url_scheme"></color
+            ><color class="url" id="url_scheme_https"></color
+            ><color class="url" id="url_host"></color
+            ><color class="url" id="url_pathname"></color
+            ><color class="url" id="url_search"></color
+            ><color class="url" id="url_hash"></color>
         </div>
         <div class="context_end">
             <h1 class="creator"><button class="creatorButton"
                     onclick="window.location.href ='https://github.com/ahmetozer/redirector'">source</button></h1>
         </div>
     </div>
+    <style type="text/css">
+        .url {
+            font-size: 35px;
+            text-align: left;
+            word-break: break-all
+        }
+
+        #url_scheme {
+            color: #ff4d4d
+        }
+
+        #url_scheme_https {
+            color: #3ae374
+        }
+
+        #url_host {
+            color: #7efff5
+        }
+
+        #url_pathname {
+            color: #17c0eb
+        }
+
+        #url_search {
+            color: #a55eea
+        }
+
+        #url_hash {
+            color: #778ca3
+        }
+
+        body {
+            color: #fff;
+            background: #17181c;
+            font: 300 1em 'Fira Sans', sans-serif;
+            -webkit-box-pack: center;
+            justify-content: center;
+            align-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            min-height: 70vh;
+            display: -webkit-box;
+            display: flex;
+            padding: 0;
+            margin: 0
+        }
+
+        .countDownText {
+            color: #dcdde1;
+            font-weight: 400;
+            font-size: 25px;
+            margin: 0;
+            background: #2f364069;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 7px 7px 0 0
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            font-weight: 400
+        }
+
+        .context {
+            display: flex
+        }
+
+        .context_end {
+            text-align: right
+        }
+
+        .fdiv {
+            max-width: 75vw;
+            max-height: 75vw
+        }
+
+        button {
+            border: none;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            outline: 0
+        }
+
+        .link_div {
+            background: #2f364069;
+            padding: 20px;
+            text-align: left;
+            font-family: Montserrat, sans-serif;
+            font-weight: 500;
+            border-radius: 0 7px 0 7px;
+            display: flex;
+        }
+
+        .creator {
+            color: #dcdde1;
+            font-weight: 400;
+            font-size: 25px;
+            margin: 0;
+            background: #2f364069;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 0 0 7px 7px;
+            display: inline-block
+        }
+
+        .creatorButton {
+            color: #4b4b4b
+        }
+
+        .stopButton {
+            margin-top: 10px;
+            background: #2f364069;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 0 7px 0 0;
+            color: #eb4d4b
+        }
+    </style>
 </body>
 <footer>
-    <script src="assets/main.js">
+    <script>
+        function uSet(a, b) {
+            document.getElementById(a).innerHTML = b;
+        }
+        let pageLoc = new URL(window.location.href);
+        const uint_regex = RegExp("^[0-9]{1,}$");
+        let from = pageLoc.searchParams.get("from");
+        const to = pageLoc.searchParams.get("to");
+        let time = pageLoc.searchParams.get("time");
+        function checkRegex(url) {
+            for (i = 0; i < regexSafeUrl.length; i++) {
+                console.log("checking+regex " + i)
+                if (regexSafeUrl[i].test(url)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        if (checkRegex(decodeURIComponent(to))) {
+            time = 0;
+        } else if (!uint_regex.test(time)) {
+            time = waitTime;
+        }
+        uSet("countDowntime", time + "s ");
+        let countDownTime = time;
+        function intervalRun() {
+            uSet("countDowntime", countDownTime + "s ");
+            if (countDownTime < 1) {
+                clearInterval(countInterval);
+                uSet("countDowntime", "0");
+                window.location.href = to;
+                document.getElementById("link_div").click();
+            }
+            countDownTime -= 1;
+        }
+
+        var countInterval = setInterval(function () {
+            intervalRun();
+        }, 1000);
+        if (to != null && to != undefined) {
+            let to_url;
+            try {
+                to_url = new URL(decodeURIComponent(to));
+            } catch {
+                uSet("url_scheme", "Error: url cannot parsed.");
+                uSet("countDowntime", "∞ ");
+                clearInterval(countInterval);
+            }
+
+            if (to_url.protocol == "https:") {
+                uSet("url_scheme_https", to_url.protocol + "//");
+            } else {
+                uSet("url_scheme", to_url.protocol + "//");
+            }
+            uSet("url_host", to_url.host);
+            uSet("url_pathname", to_url.pathname);
+            uSet("url_pathname", to_url.pathname);
+            uSet("url_search", to_url.search);
+            uSet("url_hash", to_url.hash);
+        } else {
+            uSet("url_scheme", "Error: Nothing given to redirect.");
+            uSet("countDowntime", "∞ ");
+            clearInterval(countInterval);
+        }
+        intervalRun();
+
     </script>
 </footer>
 
