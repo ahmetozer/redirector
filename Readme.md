@@ -19,11 +19,11 @@ One of them is sleep time, other one is safe url Regular expressions. These conf
 <script>
   const waitTime = 5;
   const regexSafeUrl = [
-    /^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(google.(com|co.uk|com.tr|nl))($|\/)/i,
-    /^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(ahmetozer.org)($|\/)/i,
-    /^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(github.com)($|\/ahmetozer\/)/i,
-    /^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(docker.com)($|\/)/i,
-    /^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(twitter.com)($|\/)/i,
+    /^(https:\/\/)(([a-zA-Z0-9-]{1,})(\.))*?(google\.(com|co\.uk|com\.tr|nl))($|\/)/i,
+    /^(https:\/\/)(([a-zA-Z0-9-]{1,})(\.))*?(ahmetozer\.org)($|\/)/i,
+    /^(https:\/\/)(([a-zA-Z0-9-]{1,})(\.))*?(github\.com)($|\/ahmetozer\/)/i,
+    /^(https:\/\/)(([a-zA-Z0-9-]{1,})(\.))*?(docker\.com)($|\/)/i,
+    /^(https:\/\/)(([a-zA-Z0-9-]{1,})(\.))*?(twitter\.com)($|\/)/i,
   ];
 </script>
 <!--! Configuration end -->
@@ -32,19 +32,19 @@ One of them is sleep time, other one is safe url Regular expressions. These conf
 ### Example Regular Expressions
 
 - For allowing one domain  
-`/^(https:\/\/)(ahmetozer.org)($|\/)/i`
+`/^(https:\/\/)(ahmetozer\.org)($|\/)/i`
 
 - Allowing domain with one or more subdomain  
-`/^(https:\/\/)((www|mail)(.))*?(ahmetozer.org)($|\/)/i`
+`/^(https:\/\/)((www|mail)(\.))*?(ahmetozer\.org)($|\/)/i`
 
 - Allowing domain with all sub domains  
-`/^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(ahmetozer.org)($|\/)/i`
+`/^(https:\/\/)(([a-zA-Z0-9-]{1,})(\.))*?(ahmetozer\.org)($|\/)/i`
 
 - Allowing domain with multiple TLD  
-`/^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(google.(com|co.uk|com.tr|nl))($|\/)/i`
+`/^(https:\/\/)(([a-zA-Z0-9-]{1,})(\.))*?(google\.(com|co\.uk|com\.tr|nl))($|\/)/i`
 
 - All sub domains and begin with custom path.
-`/^(https:\/\/)(([a-zA-Z0-9-]{1,})(.))*?(github.com)($|\/ahmetozer\/)/i,`
+`/^(https:\/\/)(([a-zA-Z0-9-]{1,})(\.))*?(github\.com)($|\/ahmetozer\/)/i,`
 
 ## Including to websites
 

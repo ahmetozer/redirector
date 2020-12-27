@@ -172,7 +172,6 @@
         let time = pageLoc.searchParams.get("time");
         function checkRegex(url) {
             for (i = 0; i < regexSafeUrl.length; i++) {
-                console.log("checking+regex " + i)
                 if (regexSafeUrl[i].test(url)) {
                     return true;
                 }
